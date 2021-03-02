@@ -1,0 +1,4 @@
+# simple gitignore
+
+# ignore project-specific files
+*.sublime-*
