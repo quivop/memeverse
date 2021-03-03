@@ -58,3 +58,6 @@ function print_stylesheet () {
 """;
 }
 
+function Page::print_custom_head() {
+    """<meta name="viewport" content="width=device-width, initial-scale=1.0">""";
+}
