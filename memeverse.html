@@ -17,3 +17,45 @@ layerinfo "minorversion" = 1;
 #
 ###############################################################################################
 
+
+##===============================
+## Property setup
+##===============================
+
+propgroup colors {
+    property Color color_comment_border { des = "Comment border"; }
+    property Color color_comment_border_alt { des = "Alternate comment border"; }
+    property Color color_comment_background { des = "Comment background"; }
+    property Color color_comment_background_alt { des = "Alternate comment background"; }
+}
+
+##===============================
+## Comment background bs
+##===============================
+
+set color_comment_border = "#739adf";
+set color_comment_background = "#bbddff";
+
+set color_comment_border_alt = "#eee";
+set color_comment_background_alt = "#aaccee";
+
+
+function print_stylesheet () {
+
+"""
+/* Theme CSS */
+
+    .comment-wrapper-odd .header {
+        border: solid 1px $*color_comment_border;
+        background-color: $*color_comment_background;
+    }
+
+    .comment-wrapper-even .header {
+        border: solid 1px $*color_comment_border_alt;
+        background-color: $*color_comment_background_alt;
+    }
+
+
+""";
+}
+
